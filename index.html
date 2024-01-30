@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valentine's Day Proposal</title>
+</head>
+
+<body>
+
+<div class="asking">
+    <h1> <span class="highlight">Evita</span> do you want to be my Valentine?</h1>
+    <iframe src="snoopy.gif" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <div class="buttons">
+        <button class="yes-button" onclick="moveYesButton()">YES</button>
+        <button class="no-button" onmouseover="moveNoButton()">NO</button>
+    </div>
+    
+
+
+</div>
+
+<script>
+ 
+ function moveNoButton() {
+    let noButton = document.querySelector('.no-button');
+    let newX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+    let newY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+
+    noButton.style.position = 'absolute';
+    noButton.style.left = newX + 'px';
+    noButton.style.top = newY + 'px';
+}
+
+function moveYesButton(){
+    window.location.href = "yes.html"
+    
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
